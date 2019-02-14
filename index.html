@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Vuejs</title>
+
+</head>
+
+<body>
+    <div id="my-app">
+        <div class="caculater">
+            <input type="text" v-model="input">
+            <table>
+                <tr>
+                    <td class="button" v-on:click="clear">CE</td>
+                    <td class="button" v-on:click="cancel">&larr;</td>
+                    <td class="button" @click="enter('%')">%</td>
+                    <td class="button" @click="enter('/')">/</td>
+                </tr>
+                <tr>
+                    <td class="button" @click="enter(7)">7</td>
+                    <td class="button" @click="enter(8)">8</td>
+                    <td class="button" @click="enter(9)">9</td>
+                    <td class="button" @click="enter('*')">*</td>
+                </tr>
+                <tr>
+                    <td class="button" @click="enter(4)">4</td>
+                    <td class="button"  @click="enter(5)">5</td>
+                    <td class="button"  @click="enter(6)">6</td>
+                    <td class="button"  @click="enter('-')">-</td>
+                </tr>
+                <tr>
+                    <td class="button" @click="enter(1)">1</td>
+                    <td class="button" @click="enter(2)">2</td>
+                    <td class="button" @click="enter(3)">3</td>
+                    <td class="button"  @click="enter('+')">+</td>
+                </tr>
+             
+                <tr>
+                    <td class="button"  @click="enter(0)">0</td>
+                    <td class="button"  @click="enter('.')">.</td>
+                    <!-- <td class="button"  @click="equal">=</td> -->
+                    <td class="button" @click="equal">=</td>
+                </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+
+</html>
